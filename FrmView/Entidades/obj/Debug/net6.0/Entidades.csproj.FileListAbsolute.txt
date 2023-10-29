@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\Entidades\bin\Debug\net6.0\Entidades.deps.json
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\Entidades\bin\Debug\net6.0\Entidades.dll
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\Entidades\bin\Debug\net6.0\Entidades.pdb
@@ -10,3 +11,17 @@ C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\Entidades\obj\Debug\net6.0\refint\Entidades.dll
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\Entidades\obj\Debug\net6.0\Entidades.pdb
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\Entidades\obj\Debug\net6.0\ref\Entidades.dll
+=======
+C:\Users\User\Desktop\tp\FrmView\Entidades\bin\Debug\net6.0\Entidades.deps.json
+C:\Users\User\Desktop\tp\FrmView\Entidades\bin\Debug\net6.0\Entidades.dll
+C:\Users\User\Desktop\tp\FrmView\Entidades\bin\Debug\net6.0\Entidades.pdb
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfo.cs
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.dll
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\refint\Entidades.dll
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\Entidades.pdb
+C:\Users\User\Desktop\tp\FrmView\Entidades\obj\Debug\net6.0\ref\Entidades.dll
+>>>>>>> 2df79755e891da6337a11521a2c2358a044e6bfe

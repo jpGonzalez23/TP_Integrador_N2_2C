@@ -1,9 +1,10 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\FrmView.csproj": {}
+    "C:\\Users\\User\\Desktop\\tp\\FrmView\\FrmView\\FrmView.csproj": {}
   },
   "projects": {
+<<<<<<< HEAD
     "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -70,16 +71,19 @@
       }
     },
     "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\FrmView.csproj": {
+=======
+    "C:\\Users\\User\\Desktop\\tp\\FrmView\\FrmView\\FrmView.csproj": {
+>>>>>>> 2df79755e891da6337a11521a2c2358a044e6bfe
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\FrmView.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\tp\\FrmView\\FrmView\\FrmView.csproj",
         "projectName": "FrmView",
-        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\FrmView.csproj",
-        "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\tp\\FrmView\\FrmView\\FrmView.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\tp\\FrmView\\FrmView\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

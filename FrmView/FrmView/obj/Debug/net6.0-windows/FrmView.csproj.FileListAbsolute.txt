@@ -14,6 +14,7 @@ C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.genruntimeconfig.cache
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\obj\Debug\net6.0-windows\ref\FrmView.dll
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.FrmMenuPrincipal.resources
+<<<<<<< HEAD
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\bin\Debug\net6.0-windows\Azure.Core.dll
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\bin\Debug\net6.0-windows\Azure.Identity.dll
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
@@ -48,3 +49,21 @@ C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\bin\Debug\net6.0-windows\Entidades.pdb
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.csproj.AssemblyReference.cache
 C:\Users\juanp\OneDrive\Documentos\Facultad\Segundo Cuatrimestre\PyL-II-TN\TP_N2\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.csproj.CopyComplete
+=======
+C:\Users\User\Desktop\tp\FrmView\FrmView\bin\Debug\net6.0-windows\FrmView.exe
+C:\Users\User\Desktop\tp\FrmView\FrmView\bin\Debug\net6.0-windows\FrmView.deps.json
+C:\Users\User\Desktop\tp\FrmView\FrmView\bin\Debug\net6.0-windows\FrmView.runtimeconfig.json
+C:\Users\User\Desktop\tp\FrmView\FrmView\bin\Debug\net6.0-windows\FrmView.dll
+C:\Users\User\Desktop\tp\FrmView\FrmView\bin\Debug\net6.0-windows\FrmView.pdb
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.FrmMenuPrincipal.resources
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.csproj.GenerateResource.cache
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.AssemblyInfo.cs
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.dll
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\refint\FrmView.dll
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.pdb
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\FrmView.genruntimeconfig.cache
+C:\Users\User\Desktop\tp\FrmView\FrmView\obj\Debug\net6.0-windows\ref\FrmView.dll
+>>>>>>> 2df79755e891da6337a11521a2c2358a044e6bfe

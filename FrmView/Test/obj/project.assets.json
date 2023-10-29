@@ -4367,19 +4367,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juanp\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\tp\\FrmView\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Test\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\tp\\FrmView\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\tp\\FrmView\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4393,8 +4393,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Entidades\\Entidades.csproj"
+            "C:\\Users\\User\\Desktop\\tp\\FrmView\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\tp\\FrmView\\Entidades\\Entidades.csproj"
             }
           }
         }
