@@ -8,5 +8,7 @@ namespace Entidades.Interfaces
 {
     public interface IReserva
     {
+        string ComprobanteReserva {  get; }
+        void IniciarReserva();
     }
 }

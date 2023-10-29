@@ -38,8 +38,9 @@
             lblHorario = new Label();
             lstbListadoReserva = new ListBox();
             btnReservar = new Button();
-            btnCancelarReserva = new Button();
             btnModificar = new Button();
+            txtDni = new TextBox();
+            lblDni = new Label();
             ((System.ComponentModel.ISupportInitialize)numcCantPersonas).BeginInit();
             SuspendLayout();
             // 
@@ -62,7 +63,6 @@
             btnAbrir.TabIndex = 1;
             btnAbrir.Text = "Abrir";
             btnAbrir.UseVisualStyleBackColor = true;
-            btnAbrir.Click += btnAbrir_Click;
             // 
             // label1
             // 
@@ -76,20 +76,20 @@
             // 
             // txtNombre
             // 
-            txtNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtNombre.Location = new Point(12, 95);
             txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(268, 29);
+            txtNombre.Size = new Size(268, 25);
             txtNombre.TabIndex = 3;
             // 
             // numcCantPersonas
             // 
-            numcCantPersonas.Location = new Point(12, 168);
-            numcCantPersonas.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            numcCantPersonas.Location = new Point(12, 199);
+            numcCantPersonas.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             numcCantPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numcCantPersonas.Name = "numcCantPersonas";
-            numcCantPersonas.Size = new Size(159, 23);
+            numcCantPersonas.Size = new Size(268, 23);
             numcCantPersonas.TabIndex = 5;
             numcCantPersonas.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -97,7 +97,7 @@
             // 
             lblCantidadPersonas.AutoSize = true;
             lblCantidadPersonas.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCantidadPersonas.Location = new Point(12, 137);
+            lblCantidadPersonas.Location = new Point(12, 175);
             lblCantidadPersonas.Name = "lblCantidadPersonas";
             lblCantidadPersonas.Size = new Size(159, 21);
             lblCantidadPersonas.TabIndex = 6;
@@ -106,16 +106,16 @@
             // cmbHorario
             // 
             cmbHorario.FormattingEnabled = true;
-            cmbHorario.Location = new Point(12, 239);
+            cmbHorario.Location = new Point(12, 249);
             cmbHorario.Name = "cmbHorario";
-            cmbHorario.Size = new Size(121, 23);
+            cmbHorario.Size = new Size(268, 23);
             cmbHorario.TabIndex = 7;
             // 
             // lblHorario
             // 
             lblHorario.AutoSize = true;
             lblHorario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHorario.Location = new Point(12, 206);
+            lblHorario.Location = new Point(12, 225);
             lblHorario.Name = "lblHorario";
             lblHorario.Size = new Size(63, 21);
             lblHorario.TabIndex = 8;
@@ -125,48 +125,58 @@
             // 
             lstbListadoReserva.FormattingEnabled = true;
             lstbListadoReserva.ItemHeight = 15;
-            lstbListadoReserva.Location = new Point(340, 95);
+            lstbListadoReserva.Location = new Point(299, 95);
             lstbListadoReserva.Name = "lstbListadoReserva";
-            lstbListadoReserva.Size = new Size(236, 124);
+            lstbListadoReserva.Size = new Size(277, 229);
             lstbListadoReserva.TabIndex = 9;
             // 
             // btnReservar
             // 
             btnReservar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnReservar.Location = new Point(12, 279);
+            btnReservar.Location = new Point(12, 278);
             btnReservar.Name = "btnReservar";
             btnReservar.Size = new Size(128, 45);
             btnReservar.TabIndex = 10;
             btnReservar.Text = "Rervar";
             btnReservar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelarReserva
-            // 
-            btnCancelarReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCancelarReserva.Location = new Point(146, 279);
-            btnCancelarReserva.Name = "btnCancelarReserva";
-            btnCancelarReserva.Size = new Size(128, 45);
-            btnCancelarReserva.TabIndex = 11;
-            btnCancelarReserva.Text = "Cancelar";
-            btnCancelarReserva.UseVisualStyleBackColor = true;
-            // 
             // btnModificar
             // 
             btnModificar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnModificar.Location = new Point(280, 279);
+            btnModificar.Location = new Point(152, 278);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(128, 45);
             btnModificar.TabIndex = 12;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             // 
+            // txtDni
+            // 
+            txtDni.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDni.Location = new Point(12, 147);
+            txtDni.MaxLength = 50;
+            txtDni.Name = "txtDni";
+            txtDni.Size = new Size(268, 25);
+            txtDni.TabIndex = 14;
+            // 
+            // lblDni
+            // 
+            lblDni.AutoSize = true;
+            lblDni.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDni.Location = new Point(12, 123);
+            lblDni.Name = "lblDni";
+            lblDni.Size = new Size(37, 21);
+            lblDni.TabIndex = 13;
+            lblDni.Text = "DNI";
+            // 
             // FrmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(590, 337);
+            ClientSize = new Size(589, 339);
+            Controls.Add(txtDni);
+            Controls.Add(lblDni);
             Controls.Add(btnModificar);
-            Controls.Add(btnCancelarReserva);
             Controls.Add(btnReservar);
             Controls.Add(lstbListadoReserva);
             Controls.Add(lblHorario);
@@ -201,7 +211,8 @@
         private Label lblHorario;
         private ListBox lstbListadoReserva;
         private Button btnReservar;
-        private Button btnCancelarReserva;
         private Button btnModificar;
+        private TextBox txtDni;
+        private Label lblDni;
     }
 }
