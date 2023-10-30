@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "Slx7Jnc9DnDY1vOvnSRTqPx7evnWIWi46mlTIP/VJvHoQjPZu7la3BzNpkGXjVkrxTViC4P1HS7USvolyN7yOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\FrmView.csproj",
@@ -52,11 +51,12 @@
     "C:\\Users\\juanp\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-=======
-  "dgSpecHash": "4KwleyE7wqfrHCVFJUOY8NhNbGenCUqmFs32PkkjaiCxeBc04AFzXUco6qq+ANCHmf3OfuVngnoRWmUgjK/vUA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\tp\\FrmView\\FrmView\\FrmView.csproj",
-  "expectedPackageFiles": [],
->>>>>>> 2df79755e891da6337a11521a2c2358a044e6bfe
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\FrmView\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
