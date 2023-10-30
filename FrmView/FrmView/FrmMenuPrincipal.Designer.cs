@@ -38,7 +38,7 @@
             lblHorario = new Label();
             lstbListadoReserva = new ListBox();
             btnReservar = new Button();
-            btnModificar = new Button();
+            btnBuscar = new Button();
             txtDni = new TextBox();
             lblDni = new Label();
             btnCancelar = new Button();
@@ -64,6 +64,7 @@
             btnAbrir.TabIndex = 1;
             btnAbrir.Text = "Abrir";
             btnAbrir.UseVisualStyleBackColor = true;
+            btnAbrir.Click += btnAbrir_Click;
             // 
             // label1
             // 
@@ -140,16 +141,18 @@
             btnReservar.TabIndex = 10;
             btnReservar.Text = "Reservar";
             btnReservar.UseVisualStyleBackColor = true;
+            btnReservar.Click += btnReservar_Click;
             // 
-            // btnModificar
+            // btnBuscar
             // 
-            btnModificar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnModificar.Location = new Point(152, 278);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(128, 45);
-            btnModificar.TabIndex = 12;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
+            btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBuscar.Location = new Point(152, 278);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(128, 45);
+            btnBuscar.TabIndex = 12;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txtDni
             // 
@@ -179,16 +182,17 @@
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // FrmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(589, 418);
+            ClientSize = new Size(589, 381);
             Controls.Add(btnCancelar);
             Controls.Add(txtDni);
             Controls.Add(lblDni);
-            Controls.Add(btnModificar);
+            Controls.Add(btnBuscar);
             Controls.Add(btnReservar);
             Controls.Add(lstbListadoReserva);
             Controls.Add(lblHorario);
@@ -223,7 +227,7 @@
         private Label lblHorario;
         private ListBox lstbListadoReserva;
         private Button btnReservar;
-        private Button btnModificar;
+        private Button btnBuscar;
         private TextBox txtDni;
         private Label lblDni;
         private Button btnCancelar;
