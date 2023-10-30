@@ -10,9 +10,6 @@ namespace Entidades.Interfaces
     {
         string ComprobanteReserva {  get; }
         void IniciarReserva();
-<<<<<<< HEAD
-=======
 
->>>>>>> 2df79755e891da6337a11521a2c2358a044e6bfe
     }
 }

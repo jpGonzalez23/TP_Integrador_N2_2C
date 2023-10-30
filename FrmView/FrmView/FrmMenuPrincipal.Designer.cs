@@ -41,6 +41,7 @@
             btnModificar = new Button();
             txtDni = new TextBox();
             lblDni = new Label();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)numcCantPersonas).BeginInit();
             SuspendLayout();
             // 
@@ -137,7 +138,7 @@
             btnReservar.Name = "btnReservar";
             btnReservar.Size = new Size(128, 45);
             btnReservar.TabIndex = 10;
-            btnReservar.Text = "Rervar";
+            btnReservar.Text = "Reservar";
             btnReservar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
@@ -169,11 +170,22 @@
             lblDni.TabIndex = 13;
             lblDni.Text = "DNI";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancelar.Location = new Point(12, 329);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(128, 45);
+            btnCancelar.TabIndex = 15;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // FrmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(589, 339);
+            ClientSize = new Size(589, 418);
+            Controls.Add(btnCancelar);
             Controls.Add(txtDni);
             Controls.Add(lblDni);
             Controls.Add(btnModificar);
@@ -214,5 +226,6 @@
         private Button btnModificar;
         private TextBox txtDni;
         private Label lblDni;
+        private Button btnCancelar;
     }
 }
