@@ -38,7 +38,6 @@
             lblHorario = new Label();
             lstbListadoReserva = new ListBox();
             btnReservar = new Button();
-            btnBuscar = new Button();
             txtDni = new TextBox();
             lblDni = new Label();
             btnCancelar = new Button();
@@ -58,7 +57,7 @@
             // btnAbrir
             // 
             btnAbrir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAbrir.Location = new Point(448, 9);
+            btnAbrir.Location = new Point(744, 9);
             btnAbrir.Name = "btnAbrir";
             btnAbrir.Size = new Size(128, 45);
             btnAbrir.TabIndex = 1;
@@ -83,7 +82,7 @@
             txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(268, 25);
-            txtNombre.TabIndex = 3;
+            txtNombre.TabIndex = 1;
             // 
             // numcCantPersonas
             // 
@@ -92,7 +91,7 @@
             numcCantPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numcCantPersonas.Name = "numcCantPersonas";
             numcCantPersonas.Size = new Size(268, 23);
-            numcCantPersonas.TabIndex = 5;
+            numcCantPersonas.TabIndex = 3;
             numcCantPersonas.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblCantidadPersonas
@@ -111,7 +110,7 @@
             cmbHorario.Location = new Point(12, 249);
             cmbHorario.Name = "cmbHorario";
             cmbHorario.Size = new Size(268, 23);
-            cmbHorario.TabIndex = 7;
+            cmbHorario.TabIndex = 4;
             // 
             // lblHorario
             // 
@@ -129,30 +128,19 @@
             lstbListadoReserva.ItemHeight = 15;
             lstbListadoReserva.Location = new Point(299, 95);
             lstbListadoReserva.Name = "lstbListadoReserva";
-            lstbListadoReserva.Size = new Size(277, 229);
+            lstbListadoReserva.Size = new Size(573, 229);
             lstbListadoReserva.TabIndex = 9;
             // 
             // btnReservar
             // 
             btnReservar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnReservar.Location = new Point(12, 278);
+            btnReservar.Location = new Point(12, 279);
             btnReservar.Name = "btnReservar";
             btnReservar.Size = new Size(128, 45);
             btnReservar.TabIndex = 10;
             btnReservar.Text = "Reservar";
             btnReservar.UseVisualStyleBackColor = true;
             btnReservar.Click += btnReservar_Click;
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBuscar.Location = new Point(152, 278);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(128, 45);
-            btnBuscar.TabIndex = 12;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Click += btnBuscar_Click;
             // 
             // txtDni
             // 
@@ -161,7 +149,7 @@
             txtDni.MaxLength = 50;
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(268, 25);
-            txtDni.TabIndex = 14;
+            txtDni.TabIndex = 2;
             // 
             // lblDni
             // 
@@ -176,7 +164,7 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCancelar.Location = new Point(12, 329);
+            btnCancelar.Location = new Point(152, 279);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(128, 45);
             btnCancelar.TabIndex = 15;
@@ -188,11 +176,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(589, 381);
+            ClientSize = new Size(884, 336);
             Controls.Add(btnCancelar);
             Controls.Add(txtDni);
             Controls.Add(lblDni);
-            Controls.Add(btnBuscar);
             Controls.Add(btnReservar);
             Controls.Add(lstbListadoReserva);
             Controls.Add(lblHorario);
@@ -227,7 +214,6 @@
         private Label lblHorario;
         private ListBox lstbListadoReserva;
         private Button btnReservar;
-        private Button btnBuscar;
         private TextBox txtDni;
         private Label lblDni;
         private Button btnCancelar;

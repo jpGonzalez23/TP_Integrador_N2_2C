@@ -9,14 +9,26 @@ namespace Entidades.Archivo
 {
     public static class FileManager
     {
-        public static string path;
+        private static string path;
 
+        public static string Path
+        {
+            get => path;
+        }
+
+        /// <summary>
+        /// Constructor statico
+        /// </summary>
         static FileManager()
         {
             FileManager.path = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Reservas Guardas\\";
             FileManager.ValidarExistenciaDeDirectorio();
         }
 
+        /// <summary>
+        /// Metodo para validar la existencia del directorio
+        /// </summary>
+        /// <exception cref="FileManagerException">Genera una excepcion en caso de no existir</exception>
         private static void ValidarExistenciaDeDirectorio()
         {
             if (!Directory.Exists(FileManager.path))
@@ -32,6 +44,13 @@ namespace Entidades.Archivo
             }
         }
 
+        /// <summary>
+        /// Metodo para guardar los archivos
+        /// </summary>
+        /// <param name="data">Datos a guardar</param>
+        /// <param name="nombreArchivo">Nombre del archivo (.txt, .json)</param>
+        /// <param name="append">Sobre escribe </param>
+        /// <exception cref="FileManagerException">Genera una excepcion</exception>
         public static void Guardar(string data, string nombreArchivo, bool append)
         {
             try
@@ -48,6 +67,14 @@ namespace Entidades.Archivo
             }
         }
 
+        /// <summary>
+        /// Metodo para serializar
+        /// </summary>
+        /// <typeparam name="T">Es tipo Generico</typeparam>
+        /// <param name="elementos">nombre del elemento</param>
+        /// <param name="nombreArchivo">Nombre del archivo</param>
+        /// <returns></returns>
+        /// <exception cref="FileManagerException">Se genera una excepcion</exception>
         public static bool Serializar<T>(T elementos, string nombreArchivo)
         {
             try

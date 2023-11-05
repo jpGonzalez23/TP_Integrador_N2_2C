@@ -11,11 +11,11 @@ namespace Entidades.MetodosDeExtension
 {
     public static class ReservaExtension
     {
-        public static double CalcularCostoReserva(this List<Cliente> clientes, int costoInicial) 
-        {
-            clientes.ForEach(cliente => costoInicial += (costoInicial) * ((int)cliente.CantComensales / 100));
-            return costoInicial;
-        }
+        //public static double CalcularCostoReserva(this List<Comensal> comensal, int costoInicial) 
+        //{
+        //    clientes.ForEach(cliente => costoInicial += (costoInicial) * ((int)cliente.CantComensales / 100));
+        //    return costoInicial;
+        //}
 
         public static List<EMesas> AsignarMesaAleatoria(this Random random)
         {
