@@ -1,5 +1,8 @@
 ﻿namespace Entidades.Enumerados
 {
+    /// <summary>
+    /// Enumerado
+    /// </summary>
     public enum EMesas
     {
         Mesa1,

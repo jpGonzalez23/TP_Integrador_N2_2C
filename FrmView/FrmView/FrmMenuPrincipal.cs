@@ -1,4 +1,6 @@
+using Entidades.Archivo;
 using Entidades.BD;
+using Entidades.Excepciones;
 using Entidades.Modelos;
 
 namespace FrmView
@@ -13,7 +15,7 @@ namespace FrmView
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            this.reserva = new Reserva<Comensal> ("La Hmaburgeseria") ;
+            this.reserva = new Reserva<Comensal>("La Hamburgeseria");
         }
 
         /// <summary>
@@ -24,7 +26,6 @@ namespace FrmView
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             this.cmbHorario.DataSource = new string[] { "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00" };
-            this.ActualizarListBox();
         }
 
         /// <summary>
@@ -34,16 +35,7 @@ namespace FrmView
         /// <param name="e"></param>
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            if (!this.reserva.HabiliatarReserva)
-            {
-                this.reserva.HabiliatarReserva = true;
-                this.btnAbrir.Text = "Cerrar";
-            }
-            else
-            {
-                this.reserva.HabiliatarReserva = false;
-                this.btnAbrir.Text = "Abrir";
-            }
+
         }
 
         /// <summary>
@@ -54,7 +46,7 @@ namespace FrmView
         private void btnReservar_Click(object sender, EventArgs e)
         {
             Comensal comensal = new Comensal(this.txtNombre.Text, int.Parse(this.txtDni.Text), (int)this.numcCantPersonas.Value, DateTime.Parse(this.cmbHorario.SelectedItem.ToString()));
-            
+
 
             if (DataBaseManager.GuardarNuevaReserva(comensal))
             {
@@ -75,7 +67,20 @@ namespace FrmView
         /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            if (this.lstbListadoReserva.SelectedItem != null)
+            {
+                Comensal c = DataBaseManager.BuscarReservaPorDni(((Comensal)this.lstbListadoReserva.SelectedItem).Dni);
 
+                if (DataBaseManager.EliminarReservaPorDni(c.Dni))
+                {
+                    MessageBox.Show("Reserva eliminada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.ActualizarListBox();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciones un item", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         /// <summary>
@@ -85,6 +90,26 @@ namespace FrmView
         {
             this.lstbListadoReserva.DataSource = null;
             this.lstbListadoReserva.DataSource = DataBaseManager.ObtenerListaDeReserva();
+        }
+
+        private void FrmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Quieres cerrar la aplicacion?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+
+                FileManager.Serializar(this.reserva, "reserva.json");
+            }
+            catch (FileManagerException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FileManager.Guardar(ex.Message, "logs.txt", true);
+            }
         }
     }
 }

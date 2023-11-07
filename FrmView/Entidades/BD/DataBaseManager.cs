@@ -13,8 +13,15 @@ namespace Entidades.BD
 {
     public class DataBaseManager
     {
+        /// <summary>
+        /// Declaracion de atributo estatico
+        /// </summary>
         private static string stringConnection;
 
+        /// <summary>
+        /// Constructor statico
+        /// </summary>
+        /// <exception cref="ExcepcionesBD"></exception>
         static DataBaseManager()
         {
             try
@@ -27,6 +34,12 @@ namespace Entidades.BD
             }
         }
 
+        /// <summary>
+        /// Metodo estatico para Guardar Nueva Reserva
+        /// </summary>
+        /// <param name="comensal">Recibe como parametro un comensal</param>
+        /// <returns>Retorna un true si se puedo guardar la nueva reserva</returns>
+        /// <exception cref="ExcepcionesBD">Excepcion controlada</exception>
         public static bool GuardarNuevaReserva(Comensal comensal)
         {
             try
@@ -60,11 +73,33 @@ namespace Entidades.BD
             }
         }
 
+        /// <summary>
+        /// Metodo estatico para buscar por dni en la base de dato
+        /// </summary>
+        /// <param name="dni">Recibe un dni</param>
+        /// <returns></returns>
+        /// <exception cref="ExcepcionesBD">Excepcion controlada</exception>
         public static Comensal BuscarReservaPorDni(int dni)
         {
-            throw new ExcepcionesBD("Error");
+            List<Comensal> comensals = DataBaseManager.ObtenerListaDeReserva();
+
+            foreach (Comensal item in comensals)
+            {
+                if (item.Dni == dni)
+                {
+                    return item;
+                }
+            }
+
+            throw new ExcepcionesBD("Ningun elemento para ese DNI");
         }
 
+        /// <summary>
+        /// Metodo statico para eleminar una reserva atraves del dni
+        /// </summary>
+        /// <param name="dni">Recibe un dni</param>
+        /// <returns></returns>
+        /// <exception cref="ExcepcionesBD">Excepcion controlada</exception>
         public static bool EliminarReservaPorDni(int dni)
         {
             try
@@ -90,6 +125,11 @@ namespace Entidades.BD
             }
         }
 
+        /// <summary>
+        /// Metodo estatico para obtener la lista de reservas
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ExcepcionesBD"></exception>
         public static List<Comensal> ObtenerListaDeReserva()
         {
             try

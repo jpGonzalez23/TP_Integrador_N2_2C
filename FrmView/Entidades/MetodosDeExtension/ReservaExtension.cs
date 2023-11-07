@@ -17,6 +17,11 @@ namespace Entidades.MetodosDeExtension
         //    return costoInicial;
         //}
 
+        /// <summary>
+        /// Metodo de extension para asignar una mesa
+        /// </summary>
+        /// <param name="random"></param>
+        /// <returns></returns>
         public static List<EMesas> AsignarMesaAleatoria(this Random random)
         {
             List<EMesas> reservas = new List<EMesas>()

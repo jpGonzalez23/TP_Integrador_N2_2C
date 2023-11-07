@@ -196,6 +196,7 @@
             Name = "FrmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Principal";
+            FormClosing += FrmMenuPrincipal_FormClosing;
             Load += FrmMenuPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)numcCantPersonas).EndInit();
             ResumeLayout(false);

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidades.Archivo.FileManager">
+    <Position X="3.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAACIAAAACAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Archivo\FileManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.BD.DataBaseManager">
+    <Position X="10" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAQAAAAACA=</HashCode>
+      <FileName>BD\DataBaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Excepciones.ExcepcionesBD">
+    <Position X="7" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Excepciones\ExcepcionesBD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Excepciones.FileManagerException">
+    <Position X="7" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Excepciones\FileManagerException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.MetodosDeExtension.ReservaExtension">
+    <Position X="7" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetodosDeExtension\ReservaExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Modelos.Comensal">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAICMAAAAgAAAAAAgAAAAIAAAEgAAABo=</HashCode>
+      <FileName>Modelos\Comensal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Modelos.Reserva&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIABgYAAQEAAAEAABoBAIAAAAAAAAAAQAAAAAADA=</HashCode>
+      <FileName>Modelos\Reserva.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Entidades.Interfaces.IReserva">
+    <Position X="0.5" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Interfaces\IReserva.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Entidades.Enumerados.EMesas">
+    <Position X="0.5" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Enumerados\Enumerados.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Entidades.Modelos.DelegadoDemoraReserva">
+    <Position X="3.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Modelos\Reserva.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Entidades.Modelos.DelegadoNuevaReserva">
+    <Position X="6" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelos\Reserva.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
