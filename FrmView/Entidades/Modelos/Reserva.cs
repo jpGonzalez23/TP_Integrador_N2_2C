@@ -57,6 +57,16 @@ namespace Entidades.Modelos
             get => this.cantReservasFinalizadas;
         }
 
+        //string IReserva.Comprobante
+        //{
+        //    get => $"{comensals.ToString()}";
+        //}
+
+        public string Comprobante
+        {
+            get => comensals.ToString();
+        }
+
         public void IniciarReserva()
         {
             throw new NotImplementedException();

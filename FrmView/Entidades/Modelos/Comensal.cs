@@ -124,13 +124,25 @@ namespace Entidades.Modelos
             }
         }
 
+        private string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append($"Nombre: {this.Nombre} | ");
+            sb.Append($"DNI: {this.Dni} | ");
+            sb.Append($"Cantidad de comensales: {this.cantComensales} | ");
+            sb.Append($"Horario de reserva: {this.Horario}");
+
+            return sb.ToString();
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Nombre: {this.Nombre} | DNI: {this.Dni} | Cantidad de comensales: {this.cantComensales} | Horario de reserva: {this.Horario}";
+            return this.Mostrar();
         }
 
         /// <summary>

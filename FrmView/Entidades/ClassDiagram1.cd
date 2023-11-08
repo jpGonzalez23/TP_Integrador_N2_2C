@@ -45,7 +45,7 @@
   <Class Name="Entidades.Modelos.Reserva&lt;T&gt;" BaseTypeListCollapsed="true">
     <Position X="10" Y="3.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AQAAIABgYAAQEAAAEAABoBAIAAAAAAAAAAQAAAAAADA=</HashCode>
+      <HashCode>AAAAIAAgYAAQEAAAEAABgAAIAAAAAAAAAAQAAAAAABA=</HashCode>
       <FileName>Modelos\Reserva.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -64,19 +64,5 @@
       <FileName>Enumerados\Enumerados.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Delegate Name="Entidades.Modelos.DelegadoDemoraReserva">
-    <Position X="3.75" Y="6.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
-      <FileName>Modelos\Reserva.cs</FileName>
-    </TypeIdentifier>
-  </Delegate>
-  <Delegate Name="Entidades.Modelos.DelegadoNuevaReserva">
-    <Position X="6" Y="6.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Modelos\Reserva.cs</FileName>
-    </TypeIdentifier>
-  </Delegate>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

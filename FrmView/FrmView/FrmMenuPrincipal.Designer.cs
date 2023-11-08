@@ -41,6 +41,7 @@
             txtDni = new TextBox();
             lblDni = new Label();
             btnCancelar = new Button();
+            btnBuscar = new Button();
             ((System.ComponentModel.ISupportInitialize)numcCantPersonas).BeginInit();
             SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(268, 25);
-            txtNombre.TabIndex = 1;
+            txtNombre.TabIndex = 2;
             // 
             // numcCantPersonas
             // 
@@ -91,7 +92,7 @@
             numcCantPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numcCantPersonas.Name = "numcCantPersonas";
             numcCantPersonas.Size = new Size(268, 23);
-            numcCantPersonas.TabIndex = 3;
+            numcCantPersonas.TabIndex = 4;
             numcCantPersonas.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblCantidadPersonas
@@ -110,7 +111,7 @@
             cmbHorario.Location = new Point(12, 249);
             cmbHorario.Name = "cmbHorario";
             cmbHorario.Size = new Size(268, 23);
-            cmbHorario.TabIndex = 4;
+            cmbHorario.TabIndex = 5;
             // 
             // lblHorario
             // 
@@ -149,7 +150,7 @@
             txtDni.MaxLength = 50;
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(268, 25);
-            txtDni.TabIndex = 2;
+            txtDni.TabIndex = 3;
             // 
             // lblDni
             // 
@@ -172,11 +173,23 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // btnBuscar
+            // 
+            btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBuscar.Location = new Point(12, 330);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(128, 45);
+            btnBuscar.TabIndex = 16;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
             // FrmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 336);
+            ClientSize = new Size(884, 388);
+            Controls.Add(btnBuscar);
             Controls.Add(btnCancelar);
             Controls.Add(txtDni);
             Controls.Add(lblDni);
@@ -218,5 +231,6 @@
         private TextBox txtDni;
         private Label lblDni;
         private Button btnCancelar;
+        private Button btnBuscar;
     }
 }

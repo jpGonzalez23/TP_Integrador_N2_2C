@@ -162,6 +162,7 @@ namespace Entidades.BD
                         }
 
                         return listComensal;
+
                         FileManager.Guardar(listComensal.ToString(), "Reservas.txt", true);
                     }
                     else

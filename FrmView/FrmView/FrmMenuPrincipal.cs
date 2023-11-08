@@ -16,6 +16,7 @@ namespace FrmView
         {
             InitializeComponent();
             this.reserva = new Reserva<Comensal>("La Hamburgeseria");
+            //this.ActualizarListBox();
         }
 
         /// <summary>
@@ -51,6 +52,7 @@ namespace FrmView
             if (DataBaseManager.GuardarNuevaReserva(comensal))
             {
                 MessageBox.Show("Se guarado la reserva", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FileManager.Serializar(comensal.ToString(), "ListasDeResevas.txt");
                 this.ActualizarListBox();
             }
             else
@@ -102,14 +104,19 @@ namespace FrmView
                 {
                     e.Cancel = true;
                 }
-
-                FileManager.Serializar(this.reserva, "reserva.json");
             }
             catch (FileManagerException ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FileManager.Guardar(ex.Message, "logs.txt", true);
+                
+                FileManager.Guardar(ex.Message, "logs.txt", false);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBuscar buscar = new FrmBuscar();
+            buscar.ShowDialog();
         }
     }
 }
