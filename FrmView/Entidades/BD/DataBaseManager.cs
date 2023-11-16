@@ -153,22 +153,16 @@ namespace Entidades.BD
                             Comensal comensal = new Comensal();
 
                             comensal.IdComensal = reader.GetInt32(0);
-                            comensal.Nombre = reader.GetString(1);  
+                            comensal.Nombre = reader.GetString(1);
                             comensal.Dni = reader.GetInt32(2);
                             comensal.CantComensales = reader.GetInt32(3);
                             comensal.Horario = reader.GetDateTime(4);
 
                             listComensal.Add(comensal);
                         }
-
-                        return listComensal;
-
-                        FileManager.Guardar(listComensal.ToString(), "Reservas.txt", true);
                     }
-                    else
-                    {
-                        throw new ExcepcionesBD("No hay reservar");
-                    }
+
+                    return listComensal;
                 }
             }
             catch (Exception ex)

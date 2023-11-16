@@ -15,8 +15,8 @@ namespace FrmView
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            this.reserva = new Reserva<Comensal>("La Hamburgeseria");
-            //this.ActualizarListBox();
+            this.reserva = new Reserva<Comensal> ("Hamburgueseria");
+            this.ActualizarListBox();
         }
 
         /// <summary>
@@ -51,13 +51,18 @@ namespace FrmView
 
             if (DataBaseManager.GuardarNuevaReserva(comensal))
             {
-                MessageBox.Show("Se guarado la reserva", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FileManager.Serializar(comensal.ToString(), "ListasDeResevas.txt");
+                MessageBox.Show($"Se guarado la reserva \n{this.reserva.Comprobante}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                
+                
+                FileManager.Serializar(comensal.ToString(), "ListasDeResevas.json");
+                
                 this.ActualizarListBox();
             }
             else
             {
                 MessageBox.Show("No se guardo la reserva", "Informacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 this.ActualizarListBox();
             }
         }
