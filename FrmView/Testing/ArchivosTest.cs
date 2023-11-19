@@ -10,7 +10,7 @@ namespace Testing
         /// Metodo para testear la clase de archivos
         /// </summary>
         [TestMethod]
-        public void Validar_QueSeGuardeLasReservaEnArchivoTxt()
+        public void Test_Validar_Que_SeGuardenReservasEnArchivos()
         {
             Comensal comensal = new Comensal("Pepe", 45467876, 3, DateTime.Now);
             string nombreArchivo = "Reserva.txt";
@@ -22,6 +22,12 @@ namespace Testing
             bool archivoExiste = File.Exists(ruta);
 
             Assert.IsTrue(archivoExiste);
+        }
+
+        [TestMethod]
+        public void Test_Validar_Que_SeGuardenSerializados()
+        {
+
         }
     }
 }

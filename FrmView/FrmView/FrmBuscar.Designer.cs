@@ -59,12 +59,12 @@
             lstbBuscarDni.ItemHeight = 15;
             lstbBuscarDni.Location = new Point(12, 66);
             lstbBuscarDni.Name = "lstbBuscarDni";
-            lstbBuscarDni.Size = new Size(387, 94);
+            lstbBuscarDni.Size = new Size(509, 94);
             lstbBuscarDni.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(12, 166);
+            btnBuscar.Location = new Point(365, 166);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(324, 166);
+            btnSalir.Location = new Point(446, 166);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(75, 23);
             btnSalir.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(413, 201);
+            ClientSize = new Size(525, 195);
             Controls.Add(btnSalir);
             Controls.Add(btnBuscar);
             Controls.Add(lstbBuscarDni);

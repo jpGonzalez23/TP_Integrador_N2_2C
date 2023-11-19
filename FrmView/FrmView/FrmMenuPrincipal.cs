@@ -7,7 +7,7 @@ namespace FrmView
 {
     public partial class FrmMenuPrincipal : Form
     {
-        Reserva<Comensal> reserva;
+        Reserva reserva;
 
         /// <summary>
         /// Constructor
@@ -15,7 +15,7 @@ namespace FrmView
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            this.reserva = new Reserva<Comensal> ("Hamburgueseria");
+            //this.reserva = new Reserva ("Hamburgueseria");
             this.ActualizarListBox();
         }
 
@@ -46,24 +46,29 @@ namespace FrmView
         /// <param name="e"></param>
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            Comensal comensal = new Comensal(this.txtNombre.Text, int.Parse(this.txtDni.Text), (int)this.numcCantPersonas.Value, DateTime.Parse(this.cmbHorario.SelectedItem.ToString()));
-
-
-            if (DataBaseManager.GuardarNuevaReserva(comensal))
+            if (this.txtNombre.Text is null && this.txtDni.Text is null)
             {
-                MessageBox.Show($"Se guarado la reserva \n{this.reserva.Comprobante}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                
-                
-                FileManager.Serializar(comensal.ToString(), "ListasDeResevas.json");
-                
-                this.ActualizarListBox();
+                Comensal comensal = new Comensal(this.txtNombre.Text, int.Parse(this.txtDni.Text), (int)this.numcCantPersonas.Value, DateTime.Parse(this.cmbHorario.SelectedItem.ToString()));
+
+
+                if (DataBaseManager.GuardarNuevaReserva(comensal))
+                {
+                    MessageBox.Show($"Se guarado la reserva", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    FileManager.Serializar(comensal.ToString(), "ListasDeResevas.json");
+
+                    this.ActualizarListBox();
+                }
+                else
+                {
+                    MessageBox.Show("No se guardo la reserva", "Informacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.ActualizarListBox();
+                }
             }
             else
             {
-                MessageBox.Show("No se guardo la reserva", "Informacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                this.ActualizarListBox();
+                MessageBox.Show("Ingrese los datos para la reserva", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

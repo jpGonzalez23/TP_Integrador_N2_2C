@@ -21,7 +21,7 @@ namespace Entidades.BD
         /// <summary>
         /// Constructor statico
         /// </summary>
-        /// <exception cref="ExcepcionesBD"></exception>
+        /// <exception cref="DataBaseManagerException"></exception>
         static DataBaseManager()
         {
             try
@@ -30,7 +30,7 @@ namespace Entidades.BD
             }
             catch (Exception ex)
             {
-                throw new ExcepcionesBD("¡Error al conectarse a la base de datos!");
+                throw new DataBaseManagerException("¡Error al conectarse a la base de datos!");
             }
         }
 
@@ -39,7 +39,7 @@ namespace Entidades.BD
         /// </summary>
         /// <param name="comensal">Recibe como parametro un comensal</param>
         /// <returns>Retorna un true si se puedo guardar la nueva reserva</returns>
-        /// <exception cref="ExcepcionesBD">Excepcion controlada</exception>
+        /// <exception cref="DataBaseManagerException">Excepcion controlada</exception>
         public static bool GuardarNuevaReserva(Comensal comensal)
         {
             try
@@ -65,11 +65,9 @@ namespace Entidades.BD
                 }
 
             }
-            catch (ExcepcionesBD ex)
+            catch (DataBaseManagerException ex)
             {
-                throw new ExcepcionesBD("Error al guardar en la base de dato", ex);
-
-                FileManager.Guardar(ex.Message, "ErrorAlGuardarEnBD.txt", false);
+                throw new DataBaseManagerException("Error al guardar en la base de dato", ex);
             }
         }
 
@@ -78,20 +76,20 @@ namespace Entidades.BD
         /// </summary>
         /// <param name="dni">Recibe un dni</param>
         /// <returns></returns>
-        /// <exception cref="ExcepcionesBD">Excepcion controlada</exception>
+        /// <exception cref="DataBaseManagerException">Excepcion controlada</exception>
         public static Comensal BuscarReservaPorDni(int dni)
         {
-            List<Comensal> comensals = DataBaseManager.ObtenerListaDeReserva();
+            List<Comensal> listComensal = DataBaseManager.ObtenerListaDeReserva();
 
-            foreach (Comensal item in comensals)
+            foreach (Comensal comensal in listComensal)
             {
-                if (item.Dni == dni)
+                if (dni == comensal.Dni)
                 {
-                    return item;
+                    return comensal;
                 }
             }
 
-            throw new ExcepcionesBD("Ningun elemento para ese DNI");
+            throw new DataBaseManagerException("No se enconstro la reserva");
         }
 
         /// <summary>
@@ -99,7 +97,7 @@ namespace Entidades.BD
         /// </summary>
         /// <param name="dni">Recibe un dni</param>
         /// <returns></returns>
-        /// <exception cref="ExcepcionesBD">Excepcion controlada</exception>
+        /// <exception cref="DataBaseManagerException">Excepcion controlada</exception>
         public static bool EliminarReservaPorDni(int dni)
         {
             try
@@ -119,9 +117,9 @@ namespace Entidades.BD
                     return true;
                 }
             }
-            catch (ExcepcionesBD ex)
+            catch (DataBaseManagerException ex)
             {
-                throw new ExcepcionesBD("Error al eliminar la reserva", ex);
+                throw new DataBaseManagerException("Error al eliminar la reserva", ex);
             }
         }
 
@@ -129,7 +127,7 @@ namespace Entidades.BD
         /// Metodo estatico para obtener la lista de reservas
         /// </summary>
         /// <returns></returns>
-        /// <exception cref="ExcepcionesBD"></exception>
+        /// <exception cref="DataBaseManagerException"></exception>
         public static List<Comensal> ObtenerListaDeReserva()
         {
             try
@@ -167,7 +165,7 @@ namespace Entidades.BD
             }
             catch (Exception ex)
             {
-                throw new ExcepcionesBD("Error al obtener la lista de reservas", ex);
+                throw new DataBaseManagerException("Error al obtener la lista de reservas", ex);
             }
         }
     }

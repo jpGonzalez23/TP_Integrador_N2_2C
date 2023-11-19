@@ -22,7 +22,7 @@ namespace Entidades.Modelos
         /// <summary>
         /// Constructor sin parametro
         /// </summary>
-        public Comensal()
+        public Comensal():this("", 0, 0, DateTime.Now)
         {
 
         }
@@ -34,7 +34,7 @@ namespace Entidades.Modelos
         /// <param name="dni">Recibe un dni en int</param>
         /// <param name="cantComensales">Recibe la cantidad de comensales en int</param>
         /// <param name="horario">Recibe el horario en DateTime</param>
-        public Comensal(string nombre, int dni, int cantComensales, DateTime horario):this()
+        public Comensal(string nombre, int dni, int cantComensales, DateTime horario)
         {
             this.nombre = nombre;
             this.dni = dni;
