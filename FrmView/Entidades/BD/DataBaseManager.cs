@@ -30,7 +30,7 @@ namespace Entidades.BD
             }
             catch (Exception ex)
             {
-                throw new ExcepcionesBD("¡Error al conectarse a la base de datos!");
+                throw new ExcepcionesBD("¡Error al conectarse a la base de datos!", ex.InnerException);
             }
         }
 
@@ -67,9 +67,7 @@ namespace Entidades.BD
             }
             catch (ExcepcionesBD ex)
             {
-                throw new ExcepcionesBD("Error al guardar en la base de dato", ex);
-
-                FileManager.Guardar(ex.Message, "ErrorAlGuardarEnBD.txt", false);
+                throw new ExcepcionesBD("Error al guardar en la base de dato", ex); 
             }
         }
 
