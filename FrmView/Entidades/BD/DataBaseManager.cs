@@ -30,7 +30,11 @@ namespace Entidades.BD
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 throw new DataBaseManagerException("¡Error al conectarse a la base de datos!");
+=======
+                throw new ExcepcionesBD("¡Error al conectarse a la base de datos!", ex.InnerException);
+>>>>>>> 24989299f3e41710b9ab169e2edc8db66d56113f
             }
         }
 
@@ -67,7 +71,11 @@ namespace Entidades.BD
             }
             catch (DataBaseManagerException ex)
             {
+<<<<<<< HEAD
                 throw new DataBaseManagerException("Error al guardar en la base de dato", ex);
+=======
+                throw new ExcepcionesBD("Error al guardar en la base de dato", ex); 
+>>>>>>> 24989299f3e41710b9ab169e2edc8db66d56113f
             }
         }
 
