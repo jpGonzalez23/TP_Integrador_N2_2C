@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zVr56eFU1FSeAtYPVtjyBFSoZNhQHiL8xiLWZq/MJb8XAe40/ZBg3If7TFop5kcLNfbrFtzVaWfBZHwTJFUhBA==",
+  "dgSpecHash": "edZKpb+NiE/u8NFMCMU7x6E8IAsZ2NGExQuXNbvlROWBIh3q+liOG/43Bunw7p+PUdcfjqZJ/GKDRfKGuaiB/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juanp\\TP_Integrador_N2_2C\\FrmView\\Testing\\Testing.csproj",
+  "projectFilePath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Testing\\Testing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

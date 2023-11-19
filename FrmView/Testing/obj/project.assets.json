@@ -2761,11 +2761,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanp\\TP_Integrador_N2_2C\\FrmView\\Testing\\Testing.csproj",
+      "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Testing\\Testing.csproj",
       "projectName": "Testing",
-      "projectPath": "C:\\Users\\juanp\\TP_Integrador_N2_2C\\FrmView\\Testing\\Testing.csproj",
+      "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Testing\\Testing.csproj",
       "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanp\\TP_Integrador_N2_2C\\FrmView\\Testing\\obj\\",
+      "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Testing\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2782,8 +2782,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\juanp\\TP_Integrador_N2_2C\\FrmView\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\juanp\\TP_Integrador_N2_2C\\FrmView\\Entidades\\Entidades.csproj"
+            "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\TP_N2\\FrmView\\Entidades\\Entidades.csproj"
             }
           }
         }
