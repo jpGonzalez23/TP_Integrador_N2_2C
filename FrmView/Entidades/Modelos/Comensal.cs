@@ -1,4 +1,5 @@
 ﻿using Entidades.Enumerados;
+using Entidades.Interfaces;
 using Entidades.MetodosDeExtension;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Entidades.Modelos
 {
-    public class Comensal
+    public class Comensal : IComensal
     {
         /// <summary>
         /// Declaracion de variables
@@ -132,14 +133,15 @@ namespace Entidades.Modelos
         /// Metodo para mostrar por los datos del comensal
         /// </summary>
         /// <returns>Retorna una cadena de string</returns>
-        private string Mostrar()
+        public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.Append($"Nombre: {this.Nombre} | ");
             sb.Append($"DNI: {this.Dni} | ");
             sb.Append($"Cantidad de comensales: {this.cantComensales} | ");
-            sb.Append($"Horario de reserva: {this.Horario}");
+            sb.Append($"Horario de reserva: {this.Horario} | ");
+            //sb.Append($"Mesa Asignada: {}");
 
             return sb.ToString();
         }

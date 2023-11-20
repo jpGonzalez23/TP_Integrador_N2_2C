@@ -1,4 +1,6 @@
-﻿using Entidades.Modelos;
+﻿using Entidades.Enumerados;
+using Entidades.MetodosDeExtension;
+using Entidades.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,6 +84,25 @@ namespace Testing
             comensal.Dni = -12345678;
 
             Assert.AreEqual(0, comensal.Dni);
+        }
+
+        [TestMethod]
+        public void TestAsignarMesaAleatoria()
+        {
+            // Arrange
+            var random = new Random();
+
+            // Act
+            var mesasAsignadas = random.AsignarMesaAleatoria();
+
+            // Assert
+            Assert.IsNotNull(mesasAsignadas);
+            Assert.IsTrue(mesasAsignadas.Count > 0);
+            
+            foreach (var mesa in mesasAsignadas)
+            {
+                Assert.IsTrue(Enum.IsDefined(typeof(EMesas), mesa));
+            }
         }
     }
 }

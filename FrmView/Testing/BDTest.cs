@@ -18,7 +18,7 @@ namespace Testing
             Comensal comensal = new Comensal("John doe", 123456789, 4, DateTime.Parse("11:00"));
             
             // Act
-            bool result = DataBaseManager.GuardarNuevaReserva(comensal);
+            bool result =  DataBaseManager.GuardarNuevaReserva(comensal);
 
             //Assertt
             Assert.IsTrue(result);

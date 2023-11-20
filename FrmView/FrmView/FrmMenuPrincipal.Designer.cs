@@ -127,6 +127,7 @@
             // lstbListadoReserva
             // 
             lstbListadoReserva.FormattingEnabled = true;
+            lstbListadoReserva.HorizontalScrollbar = true;
             lstbListadoReserva.ItemHeight = 15;
             lstbListadoReserva.Location = new Point(299, 95);
             lstbListadoReserva.Name = "lstbListadoReserva";

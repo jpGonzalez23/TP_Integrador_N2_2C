@@ -13,7 +13,7 @@ namespace Entidades.Modelos
 {
     public delegate void DelegadoMostrarReserva();
 
-    public class Reserva : IBaseDeDatos
+    public class Reserva
     {
         public event DelegadoMostrarReserva OnReserva;
 

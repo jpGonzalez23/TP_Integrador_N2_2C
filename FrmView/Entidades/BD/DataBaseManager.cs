@@ -11,7 +11,7 @@ using Entidades.Archivo;
 
 namespace Entidades.BD
 {
-    public class DataBaseManager : IBaseDeDatos
+    public class DataBaseManager
     {
         /// <summary>
         /// Declaracion de atributo estatico
