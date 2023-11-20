@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Diagram2.cd" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 

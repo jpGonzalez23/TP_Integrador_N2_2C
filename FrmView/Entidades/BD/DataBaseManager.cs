@@ -11,7 +11,7 @@ using Entidades.Archivo;
 
 namespace Entidades.BD
 {
-    public class DataBaseManager
+    public static class DataBaseManager
     {
         /// <summary>
         /// Declaracion de atributo estatico
@@ -168,11 +168,6 @@ namespace Entidades.BD
             {
                 throw new DataBaseManagerException("Error al obtener la lista de reservas", ex);
             }
-        }
-
-        public bool SetNuevaReserva(Comensal comensal)
-        {
-            throw new NotImplementedException();
         }
     }
 }
