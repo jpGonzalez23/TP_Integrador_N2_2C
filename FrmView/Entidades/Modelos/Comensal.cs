@@ -1,4 +1,5 @@
 ﻿using Entidades.Enumerados;
+using Entidades.MetodosDeExtension;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +20,14 @@ namespace Entidades.Modelos
         private int cantComensales;
         private DateTime horario;
 
+        private List<EMesas> mesaAsignada;
+        private Random random;
+
         /// <summary>
         /// Constructor sin parametro
         /// </summary>
         public Comensal():this("", 0, 0, DateTime.Now)
         {
-
         }
 
         /// <summary>
@@ -40,6 +43,7 @@ namespace Entidades.Modelos
             this.dni = dni;
             this.cantComensales = cantComensales;
             this.horario = horario;
+            this.random = new Random();
         }
 
         /// <summary>
@@ -124,6 +128,10 @@ namespace Entidades.Modelos
             }
         }
 
+        /// <summary>
+        /// Metodo para mostrar por los datos del comensal
+        /// </summary>
+        /// <returns>Retorna una cadena de string</returns>
         private string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -134,6 +142,11 @@ namespace Entidades.Modelos
             sb.Append($"Horario de reserva: {this.Horario}");
 
             return sb.ToString();
+        }
+
+        public void AsignarMesa()
+        {
+            this.mesaAsignada = this.random.AsignarMesaAleatoria();
         }
 
         /// <summary>

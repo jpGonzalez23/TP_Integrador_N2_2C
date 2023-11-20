@@ -59,14 +59,16 @@
             lstbBuscarDni.ItemHeight = 15;
             lstbBuscarDni.Location = new Point(12, 66);
             lstbBuscarDni.Name = "lstbBuscarDni";
-            lstbBuscarDni.Size = new Size(509, 94);
+            lstbBuscarDni.Size = new Size(675, 109);
             lstbBuscarDni.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(365, 166);
+            btnBuscar.AutoSize = true;
+            btnBuscar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBuscar.Location = new Point(531, 190);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(75, 23);
+            btnBuscar.Size = new Size(78, 35);
             btnBuscar.TabIndex = 3;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
@@ -74,9 +76,11 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(446, 166);
+            btnSalir.AutoSize = true;
+            btnSalir.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSalir.Location = new Point(612, 190);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(75, 23);
+            btnSalir.Size = new Size(75, 35);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -86,7 +90,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(525, 195);
+            ClientSize = new Size(698, 233);
             Controls.Add(btnSalir);
             Controls.Add(btnBuscar);
             Controls.Add(lstbBuscarDni);

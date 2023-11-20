@@ -1,4 +1,5 @@
 ﻿using Entidades.Enumerados;
+using Entidades.Excepciones;
 using Entidades.Interfaces;
 using Entidades.Modelos;
 using System;
@@ -11,12 +12,6 @@ namespace Entidades.MetodosDeExtension
 {
     public static class ReservaExtension
     {
-        //public static double CalcularCostoReserva(this List<Comensal> comensal, int costoInicial) 
-        //{
-        //    clientes.ForEach(cliente => costoInicial += (costoInicial) * ((int)cliente.CantComensales / 100));
-        //    return costoInicial;
-        //}
-
         /// <summary>
         /// Metodo de extension para asignar una mesa
         /// </summary>
@@ -30,6 +25,12 @@ namespace Entidades.MetodosDeExtension
                 EMesas.Mesa2,
                 EMesas.Mesa3,
                 EMesas.Mesa4,
+                EMesas.Mesa5,
+                EMesas.Mesa6,
+                EMesas.Mesa7,
+                EMesas.Mesa8,
+                EMesas.Mesa9,
+                EMesas.Mesa10
             };
 
             int cant = random.Next(1, reservas.Count + 1);

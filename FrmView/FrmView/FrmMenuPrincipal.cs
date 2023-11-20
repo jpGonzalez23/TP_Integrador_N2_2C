@@ -8,6 +8,7 @@ namespace FrmView
     public partial class FrmMenuPrincipal : Form
     {
         Reserva reserva;
+        Comensal c;
 
         /// <summary>
         /// Constructor
@@ -15,8 +16,8 @@ namespace FrmView
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            //this.reserva = new Reserva ("Hamburgueseria");
-            this.ActualizarListBox();
+            this.reserva = new Reserva ();
+            this.reserva.OnReserva += this.MostrarListaReserva;
         }
 
         /// <summary>
@@ -36,7 +37,11 @@ namespace FrmView
         /// <param name="e"></param>
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-
+            if (!this.reserva.AbrirRestaurante)
+            {
+                this.txtNombre.Enabled = true;
+                this.txtDni.Enabled = true;
+            }
         }
 
         /// <summary>
@@ -54,13 +59,13 @@ namespace FrmView
 
                 FileManager.Serializar(comensal.ToString(), "ListasDeResevas.json");
 
-                this.ActualizarListBox();
+                this.MostrarListaReserva();
             }
             else
             {
                 MessageBox.Show("No se guardo la reserva", "Informacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.ActualizarListBox();
+                this.MostrarListaReserva();
             }
         }
 
@@ -78,7 +83,7 @@ namespace FrmView
                 if (DataBaseManager.EliminarReservaPorDni(c.Dni))
                 {
                     MessageBox.Show("Reserva eliminada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.ActualizarListBox();
+                    this.MostrarListaReserva();
                 }
             }
             else
@@ -90,10 +95,17 @@ namespace FrmView
         /// <summary>
         /// Metodo para actualizar el listBoxs
         /// </summary>
-        private void ActualizarListBox()
+        private void MostrarListaReserva()
         {
-            this.lstbListadoReserva.DataSource = null;
-            this.lstbListadoReserva.DataSource = DataBaseManager.ObtenerListaDeReserva();
+            if (this.InvokeRequired)
+            {
+                this.BeginInvoke(() => MostrarListaReserva());
+            }
+            else
+            {
+                this.lstbListadoReserva.DataSource = null;
+                this.lstbListadoReserva.DataSource = DataBaseManager.ObtenerListaDeReserva();
+            }
         }
 
         private void FrmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -107,7 +119,7 @@ namespace FrmView
                     e.Cancel = true;
                 }
             }
-            catch (FileManagerException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 

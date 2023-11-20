@@ -11,7 +11,7 @@ using Entidades.Archivo;
 
 namespace Entidades.BD
 {
-    public class DataBaseManager
+    public class DataBaseManager : IBaseDeDatos
     {
         /// <summary>
         /// Declaracion de atributo estatico
@@ -28,10 +28,10 @@ namespace Entidades.BD
             {
                 DataBaseManager.stringConnection = "Server=.;Database=RESERVAS_TP;Trusted_Connection=True;";
             }
-            catch (Exception ex)
+            catch (DataBaseManagerException ex)
             {
 
-                throw new DataBaseManagerException("¡Error al conectarse a la base de datos!");
+                throw new DataBaseManagerException("¡Error al conectarse a la base de datos!", ex.InnerException);
             }
         }
 
@@ -164,10 +164,15 @@ namespace Entidades.BD
                     return listComensal;
                 }
             }
-            catch (Exception ex)
+            catch (DataBaseManagerException ex)
             {
                 throw new DataBaseManagerException("Error al obtener la lista de reservas", ex);
             }
+        }
+
+        public bool SetNuevaReserva(Comensal comensal)
+        {
+            throw new NotImplementedException();
         }
     }
 }

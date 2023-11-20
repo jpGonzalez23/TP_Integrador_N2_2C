@@ -11,55 +11,41 @@ using System.Threading.Tasks;
 
 namespace Entidades.Modelos
 {
-    public delegate void DelegadoNuevaReserva();
+    public delegate void DelegadoMostrarReserva();
 
-    public class Reserva : IReserva
+    public class Reserva : IBaseDeDatos
     {
-        public event DelegadoNuevaReserva OnNuevaReserva;
+        public event DelegadoMostrarReserva OnReserva;
 
         private CancellationTokenSource cancellationToken;
         private Task tarea;
-
-        public Reserva() { }
         private Comensal comensal;
 
+        public Reserva() 
+        {
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public bool AbrirRestaurante
         {
             get
             {
-                return this.tarea is not null && (this.tarea.Status == TaskStatus.Running || this.tarea.Status == TaskStatus.WaitingToRun || this.tarea.Status == TaskStatus.WaitingForActivation);
+                return this.tarea is not null && (this.tarea.Status == TaskStatus.Running || 
+                                                  this.tarea.Status == TaskStatus.WaitingToRun || 
+                                                  this.tarea.Status == TaskStatus.WaitingForActivation);
             }
             set
             {
                 if (value && !this.AbrirRestaurante)
                 {
                     this.cancellationToken = new CancellationTokenSource();
-                    this.IniciarReserva();
                 }
-            }
-        }
-
-        public bool Estado { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void IniciarReserva()
-        {
-            CancellationToken token = this.cancellationToken.Token;
-
-            this.tarea = Task.Run(() =>
-            {
-                while (!this.cancellationToken.IsCancellationRequested)
+                else
                 {
-                    this.NotificarNuevaReserva();
+                    this.cancellationToken.Cancel();
                 }
-            }, token);
-        }
-
-        public void NotificarNuevaReserva()
-        {
-            if (this.OnNuevaReserva is not null)
-            {
-                this.comensal = new Comensal();
-                this.OnNuevaReserva.Invoke();
             }
         }
     }
