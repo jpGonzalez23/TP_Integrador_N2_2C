@@ -42,6 +42,7 @@
             lblDni = new Label();
             btnCancelar = new Button();
             btnBuscar = new Button();
+            lblMostrarMesa = new Label();
             ((System.ComponentModel.ISupportInitialize)numcCantPersonas).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // btnAbrir
             // 
             btnAbrir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAbrir.Location = new Point(744, 9);
+            btnAbrir.Location = new Point(773, 9);
             btnAbrir.Name = "btnAbrir";
             btnAbrir.Size = new Size(128, 45);
             btnAbrir.TabIndex = 1;
@@ -129,7 +130,7 @@
             lstbListadoReserva.ItemHeight = 15;
             lstbListadoReserva.Location = new Point(299, 95);
             lstbListadoReserva.Name = "lstbListadoReserva";
-            lstbListadoReserva.Size = new Size(573, 229);
+            lstbListadoReserva.Size = new Size(602, 229);
             lstbListadoReserva.TabIndex = 9;
             // 
             // btnReservar
@@ -184,11 +185,21 @@
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
+            // lblMostrarMesa
+            // 
+            lblMostrarMesa.AutoSize = true;
+            lblMostrarMesa.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMostrarMesa.Location = new Point(299, 333);
+            lblMostrarMesa.Name = "lblMostrarMesa";
+            lblMostrarMesa.Size = new Size(0, 32);
+            lblMostrarMesa.TabIndex = 17;
+            // 
             // FrmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 388);
+            ClientSize = new Size(913, 384);
+            Controls.Add(lblMostrarMesa);
             Controls.Add(btnBuscar);
             Controls.Add(btnCancelar);
             Controls.Add(txtDni);
@@ -232,5 +243,6 @@
         private Label lblDni;
         private Button btnCancelar;
         private Button btnBuscar;
+        private Label lblMostrarMesa;
     }
 }
