@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             lblInformacion = new Label();
-            btnAbrir = new Button();
             label1 = new Label();
             txtNombre = new TextBox();
             numcCantPersonas = new NumericUpDown();
@@ -55,17 +54,6 @@
             lblInformacion.Size = new Size(191, 45);
             lblInformacion.TabIndex = 0;
             lblInformacion.Text = "Bienvenidos";
-            // 
-            // btnAbrir
-            // 
-            btnAbrir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAbrir.Location = new Point(773, 9);
-            btnAbrir.Name = "btnAbrir";
-            btnAbrir.Size = new Size(128, 45);
-            btnAbrir.TabIndex = 1;
-            btnAbrir.Text = "Abrir";
-            btnAbrir.UseVisualStyleBackColor = true;
-            btnAbrir.Click += btnAbrir_Click;
             // 
             // label1
             // 
@@ -213,7 +201,6 @@
             Controls.Add(numcCantPersonas);
             Controls.Add(txtNombre);
             Controls.Add(label1);
-            Controls.Add(btnAbrir);
             Controls.Add(lblInformacion);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -231,7 +218,6 @@
         #endregion
 
         private Label lblInformacion;
-        private Button btnAbrir;
         private Label label1;
         private TextBox txtNombre;
         private NumericUpDown numcCantPersonas;

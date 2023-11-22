@@ -37,11 +37,7 @@ namespace FrmView
         /// <param name="e"></param>
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            if (!this.reserva.AbrirRestaurante)
-            {
-                this.txtNombre.Enabled = true;
-                this.txtDni.Enabled = true;
-            }
+            
         }
 
         /// <summary>
@@ -129,8 +125,11 @@ namespace FrmView
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            FrmBuscar buscar = new FrmBuscar();
-            buscar.ShowDialog();
+            Task.Run(() =>
+            {
+                FrmBuscar buscar = new FrmBuscar();
+                buscar.ShowDialog();
+            });
         }
     }
 }
