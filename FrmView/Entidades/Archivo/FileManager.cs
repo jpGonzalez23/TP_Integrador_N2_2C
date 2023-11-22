@@ -79,7 +79,7 @@ namespace Entidades.Archivo
         {
             try
             {
-                FileManager.Guardar(System.Text.Json.JsonSerializer.Serialize(elementos, typeof(T)), nombreArchivo, false);
+                FileManager.Guardar(System.Text.Json.JsonSerializer.Serialize(elementos, typeof(T)), nombreArchivo, true);
                 return true;
             }
             catch (Exception ex)

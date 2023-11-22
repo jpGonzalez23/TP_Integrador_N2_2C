@@ -133,7 +133,7 @@ namespace Entidades.Modelos
         /// Metodo para mostrar por los datos del comensal
         /// </summary>
         /// <returns>Retorna una cadena de string</returns>
-        public string Mostrar()
+        string IComensal.Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -157,7 +157,7 @@ namespace Entidades.Modelos
         /// <returns></returns>
         public override string ToString()
         {
-            return this.Mostrar();
+            return ((IComensal)this).Mostrar();
         }
 
         /// <summary>

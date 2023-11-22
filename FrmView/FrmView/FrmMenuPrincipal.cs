@@ -123,7 +123,7 @@ namespace FrmView
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
-                FileManager.Guardar(ex.Message, "logs.txt", false);
+                FileManager.Guardar(ex.Message, "logs.txt", true);
             }
         }
 
