@@ -146,13 +146,16 @@ namespace Entidades.Modelos
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Metodo para asignar una mesa
+        /// </summary>
         public void AsignarMesa()
         {
             this.mesaAsignada = this.random.AsignarMesaAleatoria();
         }
 
         /// <summary>
-        /// 
+        /// Polimorfismo del metodo ToString()
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -168,6 +171,16 @@ namespace Entidades.Modelos
         private bool ValidarStringVacio(string valor)
         {
             return string.IsNullOrWhiteSpace(valor) ? false : true;
+        }
+
+        public static bool operator ==(Comensal a, Comensal b) 
+        {
+            return a.dni == b.dni;
+        }
+
+        public static bool operator !=(Comensal a, Comensal b)
+        {
+            return !(a == b);
         }
     }
 }
