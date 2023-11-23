@@ -24,10 +24,10 @@ namespace Testing
         }
 
         /// <summary>
-        /// Metodo para 
+        /// 
         /// </summary>
         [TestMethod]
-        public void test_instantiate_with_parameters()
+        public void Test_Para_Instacias_Con_Parametros()
         {
             string nombre = "John Doe";
             int dni = 12345678;
@@ -43,9 +43,11 @@ namespace Testing
             Assert.AreEqual(horario, comensal.Horario);
         }
 
-        // Comensal's properties can be set and retrieved correctly
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
-        public void test_properties_set_and_retrieved_correctly()
+        public void Test_Para_Recuperar_Los_Datos_Instanciados()
         {
             Comensal comensal = new Comensal();
 
@@ -64,7 +66,9 @@ namespace Testing
             Assert.AreEqual(DateTime.Parse("11:00"), comensal.Horario);
         }
 
-        // Comensal's IdComensal property cannot be set to a negative integer
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void Test_Validar_Que_El_IdComensal_No_Sea_Negativo()
         {
@@ -75,7 +79,9 @@ namespace Testing
             Assert.AreEqual(0, comensal.IdComensal);
         }
 
-        // Comensal's Dni property cannot be set to a negative integer
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void Test_Validar_Que_El_Dni_No_Sea_Negativo()
         {
@@ -86,8 +92,11 @@ namespace Testing
             Assert.AreEqual(0, comensal.Dni);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
-        public void TestAsignarMesaAleatoria()
+        public void Test_Asignar_Mesa_Aleatoria()
         {
             // Arrange
             var random = new Random();
