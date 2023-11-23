@@ -30,7 +30,7 @@ namespace Entidades.BD
             }
             catch (DataBaseManagerException ex)
             {
-
+                FileManager.Serializar(ex.Message, "ErrorBaseDeDatos.json");
                 throw new DataBaseManagerException("¡Error al conectarse a la base de datos!", ex.InnerException);
             }
         }
@@ -76,7 +76,7 @@ namespace Entidades.BD
         /// Metodo estatico para buscar por dni en la base de dato
         /// </summary>
         /// <param name="dni">Recibe un dni</param>
-        /// <returns></returns>
+        /// <returns>Retorna el comensal buscado</returns>
         /// <exception cref="DataBaseManagerException">Excepcion controlada</exception>
         public static Comensal BuscarReservaPorDni(int dni)
         {
@@ -97,7 +97,7 @@ namespace Entidades.BD
         /// Metodo statico para eleminar una reserva atraves del dni
         /// </summary>
         /// <param name="dni">Recibe un dni</param>
-        /// <returns></returns>
+        /// <returns>Retorna un true si se elimino correctamente</returns>
         /// <exception cref="DataBaseManagerException">Excepcion controlada</exception>
         public static bool EliminarReservaPorDni(int dni)
         {
@@ -127,8 +127,8 @@ namespace Entidades.BD
         /// <summary>
         /// Metodo estatico para obtener la lista de reservas
         /// </summary>
-        /// <returns></returns>
-        /// <exception cref="DataBaseManagerException"></exception>
+        /// <returns>Retorna una lista de los comensales de la base de datos</returns>
+        /// <exception cref="DataBaseManagerException">Se genera un excepcion en caso de no conseguir el listado</exception>
         public static List<Comensal> ObtenerListaDeReserva()
         {
             try

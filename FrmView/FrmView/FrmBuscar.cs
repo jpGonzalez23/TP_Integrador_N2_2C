@@ -16,12 +16,20 @@ namespace FrmView
 {
     public partial class FrmBuscar : Form
     {
+        /// <summary>
+        /// Constructor del formulario FrmBuscar
+        /// </summary>
         public FrmBuscar()
         {
             InitializeComponent();
             this.ActualizarListBox();
         }
 
+        /// <summary>
+        /// Evento del btnBuscar_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Comensal c = DataBaseManager.BuscarReservaPorDni(int.Parse(this.txtBuscarDni.Text));
@@ -30,6 +38,11 @@ namespace FrmView
             FileManager.Guardar(c.ToString(), "Reserva.txt", false);
         }
 
+        /// <summary>
+        /// Evento del btnSalir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
