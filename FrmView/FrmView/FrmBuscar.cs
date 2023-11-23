@@ -1,4 +1,5 @@
-﻿using Entidades.BD;
+﻿using Entidades.Archivo;
+using Entidades.BD;
 using Entidades.Interfaces;
 using Entidades.Modelos;
 using System;
@@ -26,6 +27,7 @@ namespace FrmView
             Comensal c = DataBaseManager.BuscarReservaPorDni(int.Parse(this.txtBuscarDni.Text));
 
             MessageBox.Show(c.ToString(), "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FileManager.Guardar(c.ToString(), "Reserva.txt", false);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
